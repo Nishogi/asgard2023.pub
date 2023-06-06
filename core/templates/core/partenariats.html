@@ -1,0 +1,169 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Nos partenaires | Asgard</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'core/styles/navbar.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'core/styles/partenariats.css' %}"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="{% static 'core/sources/images/favicon/favicon-32x32.png' %}"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="{% static 'core/sources/images/favicon/favicon-16x16.png' %}"
+    />
+  </head>
+
+  <script
+    src="https://kit.fontawesome.com/f693f4da63.js"
+    crossorigin="anonymous"
+  ></script>
+
+  <script
+    type="text/javascript"
+    src="{% static 'core/scripts/orga.js' %}"
+    charset="utf-8"
+  ></script>
+
+  <body>
+    <header>
+      <nav class="navbar">
+        <a href="/"
+          ><img src="{% static 'core/sources/images/logo/icon.png' %}"
+        /></a>
+
+        <div class="container nav-container">
+          <input class="checkbox" type="checkbox" />
+          <div class="hamburger-lines">
+            <span class="line" id="line1"></span>
+            <span class="line" id="line2"></span>
+            <span class="line" id="line3"></span>
+          </div>
+          <div class="logo">
+            <h1>Asgard</h1>
+          </div>
+          <div class="nav-links">
+            <ul>
+              <li>
+                <a href="/">Qui sommes-nous ?</a>
+              </li>
+              <li>
+                <a href="/organigramme">Organigramme</a>
+              </li>
+              <li>
+                <a href="/programme">Programme</a>
+              </li>
+              <li  class="active">
+                <a href="/partenariats">Nos partenaires</a>
+              </li>
+              <li>
+                <a href="/ptitdej">Commande ton petit-déjeuner !</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="slider">
+      <div class="bouclier">
+        <div class="box">
+          <div class="controls">
+            <div class="gauche">
+              <div class="icon">
+                <i class="far fa-arrow-alt-circle-left"></i>
+              </div>
+            </div>
+            <div class="droite">
+              <div class="icon">
+                <i class="far fa-arrow-alt-circle-right"></i>
+              </div>
+            </div>
+          </div>
+          <div class="slides-holder">
+            <div class="item actif">
+              <img src="{% static 'core/sources/images/sponsors/ocs.png' %}" />
+            </div>
+            <div class="item">
+              <img src="{% static 'core/sources/images/sponsors/simone.png' %}" />
+            </div>
+            <div class="item">
+              <img src="{% static 'core/sources/images/sponsors/g20.png' %}" />
+            </div>
+            <div class="item">
+              <img src="{% static 'core/sources/images/sponsors/cinema.png' %}" />
+            </div>
+            <div class="item">
+              <img src="{% static 'core/sources/images/sponsors/patinoire.jpg' %}" />
+            </div>
+            <div class="item">
+              <img src="{% static 'core/sources/images/upcoming.jpeg' %}" />
+            </div>
+          </div>
+          <div class="descriptions">
+            <div class="name visible">
+              <h1>OCS</h1>
+              <p class="description">
+                OCS est une plateforme vous permettant de regarder les meilleurs
+                films et séries du moment. En souscrivant à OCS vous aurez accès
+                au meilleur du cinéma 6 mois après la sortie en salles, à des
+                séries inédites (Sélection HBO, MGM, NBCUniversal...) et à des
+                créations originales françaises et internationales.
+              </p>
+            </div>
+            <div class="name">
+              <h1>En voiture Simone !</h1>
+              <p class="description">
+                Vous n'avez pas encore votre permis ? Pas de problème ! Passez
+                par en voiture Simone pour profiter de quizz de code
+                gratuitement et des entraînements flexibles avec des moniteurs
+                partout en France, le tout pour des prix imbattables.
+              </p>
+            </div>
+            <div class="name">
+              <h1>Supermarchés G20</h1>
+              <p class="description">
+                C'est le supermarché préféré du campus (selon un institut de
+                sondages indépendant). Passez-y pour refaire le plein de bonnes
+                choses !
+              </p>
+            </div>
+            <div class="name">
+              <h1>Cinémas Grand Paris Sud</h1>
+              <p class="description">
+                Passez un bon moment devant un film dans un de nos cinémas partenaires.
+              </p>
+            </div>
+            <div class="name">
+              <h1>Patinoire d'Évry</h1>
+              <p class="description">
+                Venez glisser sur cette patinoire située à 20min à pied du campus.
+              </p>
+            </div>
+            <div class="name">
+              <h1>Et encore d'autres à venir !</h1>
+              <p class="description"></p>
+            </div>
+          </div>
+        
+        </div>
+      </div>
+    </div>
+    <script src="{% static 'core/scripts/partenariats.js' %}"></script>
+  </body>
+</html>

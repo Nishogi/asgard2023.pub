@@ -1,0 +1,96 @@
+{% load static %}
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Petits déjeuners Asgard</title>
+  <meta content="" name="description" />
+  <meta content="" name="keywords" />
+  <link
+    href="{% static 'breakfast/sources/images/favicon/favicon.ico' %}"
+    rel="icon"
+  />
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href=" {% static 'breakfast/style/navbar.css' %} "
+  />
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href=" {% static 'breakfast/style/ok.css' %} "
+  />
+  <style type="text/css">
+    * {
+      cursor: url(https://cur.cursors-4u.net/sports/spo-1/spo15.cur), auto !important;
+    }
+  </style>
+  <a
+    href="https://www.cursors-4u.com/cursor/2005/05/08/spo15-11.html"
+    target="_blank"
+    title="Sword"
+  >
+    <img
+      src="https://cur.cursors-4u.net/cursor.png"
+      height="auto"
+      width="auto"
+      border="0"
+      alt="Sword"
+      style="position: absolute; top: 0px; right: 0px"
+    />
+  </a>
+</head>
+<header>
+  <nav class="navbar">
+    <a href="/">
+      <img src="{% static 'breakfast/sources/images/icon.png' %}" />
+    </a>
+    <div class="container nav-container">
+      <input class="checkbox" type="checkbox" />
+      <div class="hamburger-lines">
+        <span class="line" id="line1"></span>
+        <span class="line" id="line2"></span>
+        <span class="line" id="line3"></span>
+      </div>
+      <div class="logo">
+        <h1>Asgard</h1>
+      </div>
+      <div class="nav-links">
+        <ul>
+          <li>
+            <a href="/">Qui sommes-nous ?</a>
+          </li>
+          <li>
+            <a href="/organigramme">Organigramme</a>
+          </li>
+          <li>
+            <a href="/programme">Programme</a>
+          </li>
+          <li>
+            <a href="/partenariats">Nos partenaires</a>
+          </li>
+          <li>
+            <a href="/ptitdej">Commande ton petit-déjeuner !</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+<body>
+  <img
+    alt="cornes"
+    class="cornes"
+    src="{% static 'breakfast/sources/images/cornes.png' %}"
+  />
+  <div class="content">
+    <div class="divider"></div>
+    <h1>Merci pour ta commande !</h1>
+    <img
+      alt="gif"
+      class="yolo"
+      src="{% static 'breakfast/sources/images/yolo.png' %}"
+    />
+    <h1>Asgard prépare ton petit déj' !</h1>
+  </div>
+</body>

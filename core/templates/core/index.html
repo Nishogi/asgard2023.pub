@@ -1,0 +1,132 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <title>Asgard | Liste BDE 2023</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta
+      name="keywords"
+      content="ASGARD, Asgard, asgard, liste, BDE, TSP, IMTBS, TMSP, Telecom, SudParis, Institut, Mine, Buisness, School, 2023, Site, Web, Clip, Réseaux, Sociaux"
+    />
+    <meta
+      name="description"
+      content="Site web de la liste BDE 2023 TMSP : ASGARD"
+    />
+    <meta name="author" content="Nicolas Asgard Rocq" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'core/styles/navbar.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'core/styles/index.css' %}"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="{% static 'core/sources/images/favicon/favicon-32x32.png' %}"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="{% static 'core/sources/images/favicon/favicon-16x16.png' %}"
+    />
+  </head>
+  <script
+    src="https://kit.fontawesome.com/f693f4da63.js"
+    crossorigin="anonymous"
+  ></script>
+  <body>
+    <header>
+      <nav
+        class="navbar"
+        style="background-color: transparent; border-style: none"
+      >
+        <a href="/">
+          <img src="{% static 'core/sources/images/logo/icon.png' %}" />
+        </a>
+        <div class="container nav-container">
+          <input class="checkbox" type="checkbox" name="" id="" />
+          <div class="hamburger-lines">
+            <span class="line" id="line1"></span>
+            <span class="line" id="line2"></span>
+            <span class="line" id="line3"></span>
+          </div>
+          <div class="nav-links">
+            <ul>
+              <li class="active">
+                <a href="/">Qui sommes-nous ?</a>
+              </li>
+              <li>
+                <a href="/organigramme">Organigramme</a>
+              </li>
+              <li>
+                <a href="/programme">Programme</a>
+              </li>
+              <li>
+                <a href="/partenariats">Nos partenaires</a>
+              </li>
+              <li>
+                <a href="/ptitdej">Commande ton petit-déjeuner !</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div class="icons">
+      <a href="https://www.facebook.com/asgard2023"
+        ><i class="fa-brands fa-facebook"></i
+      ></a>
+      <a href="https://www.instagram.com/asgard_2023/"
+        ><i class="fa-brands fa-instagram"></i
+      ></a>
+      <a href="https://www.tiktok.com/@asgard.listebdetmsp"
+        ><i class="fa-brands fa-tiktok"></i
+      ></a>
+      <a href="https://www.youtube.com/channel/UC-2uXD95AkhOeE1242YgMTw"
+        ><i class="fa-brands fa-youtube"></i
+      ></a>
+      <a
+        href="https://drive.google.com/drive/folders/1cBQJMFeWhkP3njOR8GI-9RnXHS7zM6kH"
+        ><i class="fa-solid fa-book"></i
+      ></a>
+    </div>
+    <div id="videowrapper">
+      <h1>Asgard</h1>
+      <div id="présentation">
+        <p>
+          Bienvenue sur la page d'ASGARD, une liste de bons vivants qui vont
+          retourner l'INT (tah la ref à notre rap). On se donne à fond pour
+          booster la vie associative en espérant que ça vous fasse kiffer !
+        </p>
+      </div>
+      <video
+        id="video"
+        autoplay
+        playsinline
+        loop
+        muted
+        poster="{% static 'core/sources/images/background.png' %}"
+      >
+        <source
+          src="{% static 'core/sources/video/background.webm' %}"
+          type="video/webm"
+        />
+        <source
+          src="{% static 'core/sources/video/background.mp4' %}"
+          type="video/mp4"
+        />
+        <source
+          src="{% static 'core/sources/video/background.ogg' %}"
+          type="video/mp4"
+        />
+      </video>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,152 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <title>Notre programme | Liste BDE 2023</title>
+    <meta name="viewport" content="width=device-width" />
+    <meta charset="UTF-8" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'core/styles/navbar.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'core/styles/programme.css' %}"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="{% static 'core/sources/images/favicon/favicon-32x32.png' %}"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="{% static 'core/sources/images/favicon/favicon-16x16.png' %}"
+    />
+  </head>
+
+  <body>
+    <header>
+      <nav
+        class="navbar"
+        style="background-color: transparent; border-style: none"
+      >
+        <a href="/"
+          ><img src="{% static 'core/sources/images/logo/icon.png' %}"
+        /></a>
+
+        <div class="container nav-container">
+          <input class="checkbox" type="checkbox" name="" id="" />
+          <div class="hamburger-lines">
+            <span class="line" id="line1"></span>
+            <span class="line" id="line2"></span>
+            <span class="line" id="line3"></span>
+          </div>
+
+          <div class="nav-links">
+            <ul>
+              <li>
+                <a href="/">Qui sommes-nous ?</a>
+              </li>
+              <li>
+                <a href="/organigramme">Organigramme</a>
+              </li>
+              <li class="active">
+                <a href="/programme">Programme</a>
+              </li>
+              <li>
+                <a href="/partenariats">Nos partenaires</a>
+              </li>
+              <li>
+                <a href="/ptitdej">Commande ton petit-déjeuner !</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div id="parchment"></div>
+      <div id="contain">
+        <p class="inkTitle">Notre programme, nos idées</p>
+
+        <p id="labarum">
+          <img src="{% static 'core/sources/images/logo/logo.png' %}" />
+        </p>
+        <p><br /></p>
+        <p>
+          Créer un système de parrainage des étudiants internationaux au sein du
+          campus
+        </p>
+        <p>Faire une journée internationale durant la SEI</p>
+        <p>Faciliter l’accès aux soins sur le campus</p>
+        <p>
+          Mettre des salles à disposition des élèves le week-end pour qu'ils
+          puissent profiter d'un cadre de travail agréable
+        </p>
+        <p>Réorganiser le gala</p>
+        <p>
+          Organiser un évènement chaque mois ayant pour thème une autre culture
+        </p>
+        <p>Organiser des évènements et des soirées sur Paris</p>
+        <p>
+          Remplacer les ampoules de la Maisel par des leds basse consommation
+        </p>
+        <p>
+          Economiser l’électricité en éteignant les lumières des bâtiments
+          Maisel pendant les heures creuses
+        </p>
+        <p>
+          Eviter le gaspillage au Ritz en mettant des doggy bags à disposition
+          des étudiants
+        </p>
+        <p>
+          Eviter les polycopiés inutiles pour certains élèves, et ce dans toutes
+          les matières
+        </p>
+        <p>
+          Continuer la rénovation du foyer tant au niveau esthétique que pour
+          assurer la sécurité des étudiants (coucou les toilettes)
+        </p>
+        <p>
+          Favoriser l'entraide entre les différents clubs et associations pour
+          encourager l'organisation d'évents variés, ambitieux et originaux
+        </p>
+        <p>
+          Faire de l'écoute des étudiants (et des clubs/assos) une priorité.
+          N'hésitez pas à nous faire parvenir vos idées ou vos remarques !
+        </p>
+
+        <p class="cachet"><img src="https://i.postimg.cc/4NBYNqCR/22.png" /></p>
+        <div id="signature">
+          Asgard<br /><br />Liste prétendant au bureau des élèves <br />
+          de l'Institut National des Télécommunications <br />
+          pour l'an de grâce 2023
+        </div>
+      </div>
+    </main>
+    <!--  
+    <svg>
+      <filter id="wavy2">
+        <feTurbulence
+          x="0"
+          y="0"
+          baseFrequency="0.02"
+          numOctaves="5"
+          seed="1"
+        />
+        <feDisplacementMap in="SourceGraphic" scale="20" />
+      </filter>
+    </svg>
+-->
+    <script src="{% static 'core/scripts/programme.js' %}"></script>
+    <script>
+      ScrollHeight();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,410 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>L'équipe | Asgard</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'core/styles/navbar.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'core/styles/orga.css' %}"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="{% static 'core/sources/images/favicon/favicon-32x32.png' %}"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="{% static 'core/sources/images/favicon/favicon-16x16.png' %}"
+    />
+  </head>
+
+  <script
+    type="text/javascript"
+    src="{% static 'core/scripts/orga.js' %}"
+    charset="utf-8"
+  ></script>
+
+  <body>
+    <header>
+      <nav class="navbar">
+        <a href="/"
+          ><img src="{% static 'core/sources/images/logo/icon.png' %}"
+        /></a>
+
+        <div class="container nav-container">
+          <input class="checkbox" type="checkbox" />
+          <div class="hamburger-lines">
+            <span class="line" id="line1"></span>
+            <span class="line" id="line2"></span>
+            <span class="line" id="line3"></span>
+          </div>
+          <div class="logo">
+            <h1>Asgard</h1>
+          </div>
+          <div class="nav-links">
+            <ul>
+              <li>
+                <a href="/">Qui sommes-nous ?</a>
+              </li>
+              <li class="active">
+                <a href="/organigramme">Organigramme</a>
+              </li>
+              <li>
+                <a href="/programme">Programme</a>
+              </li>
+              <li>
+                <a href="/partenariats">Nos partenaires</a>
+              </li>
+              <li>
+                <a href="/ptitdej">Commande ton petit-déjeuner !</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div id="flou" onclick="pop_up_close()"></div>
+
+    <img id="fond" src="{% static 'core/sources/images/background/forest.jpg' %}" />
+
+    <span id="petitmot"></span>
+
+    <div id="organigramme">
+      <div class="carte">
+        <div class="content">
+          <h2 id="name1"></h2>
+          <p id="pole1"></p>
+          <a id="descr1" onclick="description(1)">+</a>
+        </div>
+        <img src="" id="pdp1" />
+      </div>
+
+      <div class="carte">
+        <div class="content">
+          <h2 id="name2"></h2>
+          <p id="pole2"></p>
+          <a id="descr2" onclick="description(2)">+</a>
+        </div>
+        <img src="" id="pdp2" />
+      </div>
+
+      <div class="carte">
+        <div class="content">
+          <h2 id="name3"></h2>
+          <p id="pole3"></p>
+          <a id="descr3" onclick="description(3)">+</a>
+        </div>
+        <img src="" id="pdp3" />
+      </div>
+
+      <div class="carte">
+        <div class="content">
+          <h2 id="name4"></h2>
+          <p id="pole4"></p>
+          <a id="descr4" onclick="description(4)">+</a>
+        </div>
+        <img src="" id="pdp4" />
+      </div>
+
+      <div class="carte">
+        <div class="content">
+          <h2 id="name5"></h2>
+          <p id="pole5"></p>
+          <a id="descr5" onclick="description(5)">+</a>
+        </div>
+        <img src="" id="pdp5" />
+      </div>
+
+      <div class="carte">
+        <div class="content">
+          <h2 id="name6"></h2>
+          <p id="pole6"></p>
+          <a id="descr6" onclick="description(6)">+</a>
+        </div>
+        <img src="" id="pdp6" />
+      </div>
+
+      <div class="carte">
+        <div class="content">
+          <h2 id="name7"></h2>
+          <p id="pole7"></p>
+          <a id="descr7" onclick="description(7)">+</a>
+        </div>
+        <img src="" id="pdp7" />
+      </div>
+
+      <div class="carte">
+        <div class="content">
+          <h2 id="name8"></h2>
+          <p id="pole8"></p>
+          <a id="descr8" onclick="description(8)">+</a>
+        </div>
+        <img src="" id="pdp8" />
+      </div>
+
+      <div class="carte">
+        <div class="content">
+          <h2 id="name9"></h2>
+          <p id="pole9"></p>
+          <a id="descr9" onclick="description(9)">+</a>
+        </div>
+        <img src="" id="pdp9" />
+      </div>
+
+      <div class="carte">
+        <div class="content">
+          <h2 id="name10"></h2>
+          <p id="pole10"></p>
+          <a id="descr10" onclick="description(10)">+</a>
+        </div>
+        <img src="" id="pdp10" />
+      </div>
+
+      <div class="carte">
+        <div class="content">
+          <h2 id="name11"></h2>
+          <p id="pole11"></p>
+          <a id="descr11" onclick="description(11)">+</a>
+        </div>
+        <img src="" id="pdp11" />
+      </div>
+
+      <div class="carte">
+        <div class="content">
+          <h2 id="name12"></h2>
+          <p id="pole12"></p>
+          <a id="descr12" onclick="description(12)">+</a>
+        </div>
+        <img src="" id="pdp12" />
+      </div>
+
+      <div class="carte">
+        <div class="content">
+          <h2 id="name13"></h2>
+          <p id="pole13"></p>
+          <a id="descr13" onclick="description(13)">+</a>
+        </div>
+        <img src="" id="pdp13" />
+      </div>
+
+      <div class="carte">
+        <div class="content">
+          <h2 id="name14"></h2>
+          <p id="pole14"></p>
+          <a id="descr14" onclick="description(14)">+</a>
+        </div>
+        <img src="" id="pdp14" />
+      </div>
+
+      <div class="carte">
+        <div class="content">
+          <h2 id="name15"></h2>
+          <p id="pole15"></p>
+          <a id="descr15" onclick="description(15)">+</a>
+        </div>
+        <img src="" id="pdp15" />
+      </div>
+
+      <div class="carte">
+        <div class="content">
+          <h2 id="name16"></h2>
+          <p id="pole16"></p>
+          <a id="descr16" onclick="description(16)">+</a>
+        </div>
+        <img src="" id="pdp16" />
+      </div>
+
+      <div class="carte">
+        <div class="content">
+          <h2 id="name17"></h2>
+          <p id="pole17"></p>
+          <a id="descr17" onclick="description(17)">+</a>
+        </div>
+        <img src="" id="pdp17" />
+      </div>
+
+      <div class="carte">
+        <div class="content">
+          <h2 id="name18"></h2>
+          <p id="pole18"></p>
+          <a id="descr18" onclick="description(18)">+</a>
+        </div>
+        <img src="" id="pdp18" />
+      </div>
+
+      <div class="carte">
+        <div class="content">
+          <h2 id="name19"></h2>
+          <p id="pole19"></p>
+          <a id="descr19" onclick="description(19)">+</a>
+        </div>
+        <img src="" id="pdp19" />
+      </div>
+
+      <div class="carte">
+        <div class="content">
+          <h2 id="name20"></h2>
+          <p id="pole20"></p>
+          <a id="descr20" onclick="description(20)">+</a>
+        </div>
+        <img src="" id="pdp20" />
+      </div>
+
+      <div class="carte">
+        <div class="content">
+          <h2 id="name21"></h2>
+          <p id="pole21"></p>
+          <a id="descr21" onclick="description(21)">+</a>
+        </div>
+        <img src="" id="pdp21" />
+      </div>
+
+      <div class="carte">
+        <div class="content">
+          <h2 id="name22"></h2>
+          <p id="pole22"></p>
+          <a id="descr22" onclick="description(22)">+</a>
+        </div>
+        <img src="" id="pdp22" />
+      </div>
+
+      <div class="carte">
+        <div class="content">
+          <h2 id="name23"></h2>
+          <p id="pole23"></p>
+          <a id="descr23" onclick="description(23)">+</a>
+        </div>
+        <img src="" id="pdp23" />
+      </div>
+
+      <div class="carte">
+        <div class="content">
+          <h2 id="name24"></h2>
+          <p id="pole24"></p>
+          <a id="descr24" onclick="description(24)">+</a>
+        </div>
+        <img src="" id="pdp24" />
+      </div>
+
+      <div class="carte">
+        <div class="content">
+          <h2 id="name25"></h2>
+          <p id="pole25"></p>
+          <a id="descr25" onclick="description(25)">+</a>
+        </div>
+        <img src="" id="pdp25" />
+      </div>
+
+      <div class="carte">
+        <div class="content">
+          <h2 id="name26"></h2>
+          <p id="pole26"></p>
+          <a id="descr26" onclick="description(26)">+</a>
+        </div>
+        <img src="" id="pdp26" />
+      </div>
+
+      <div class="carte">
+        <div class="content">
+          <h2 id="name27"></h2>
+          <p id="pole27"></p>
+          <a id="descr27" onclick="description(27)">+</a>
+        </div>
+        <img src="" id="pdp27" />
+      </div>
+
+      <div class="carte">
+        <div class="content">
+          <h2 id="name28"></h2>
+          <p id="pole28"></p>
+          <a id="descr28" onclick="description(28)">+</a>
+        </div>
+        <img src="" id="pdp28" />
+      </div>
+
+      <div class="carte">
+        <div class="content">
+          <h2 id="name29"></h2>
+          <p id="pole29"></p>
+          <a id="descr29" onclick="description(29)">+</a>
+        </div>
+        <img src="" id="pdp29" />
+      </div>
+
+      <div class="carte">
+        <div class="content">
+          <h2 id="name30"></h2>
+          <p id="pole30"></p>
+          <a id="descr30" onclick="description(30)">+</a>
+        </div>
+        <img src="" id="pdp30" />
+      </div>
+
+      <div class="carte">
+        <div class="content">
+          <h2 id="name31"></h2>
+          <p id="pole31"></p>
+          <a id="descr31" onclick="description(31)">+</a>
+        </div>
+        <img src="" id="pdp31" />
+      </div>
+
+      <div class="carte">
+        <div class="content">
+          <h2 id="name32"></h2>
+          <p id="pole32"></p>
+          <a id="descr32" onclick="description(32)">+</a>
+        </div>
+        <img src="" id="pdp32" />
+      </div>
+
+      <div class="carte">
+        <div class="content">
+          <h2 id="name33"></h2>
+          <p id="pole33"></p>
+          <a id="descr33" onclick="description(33)">+</a>
+        </div>
+        <img src="" id="pdp33" />
+      </div>
+
+      <div class="carte">
+        <div class="content">
+          <h2 id="name34"></h2>
+          <p id="pole34"></p>
+          <a id="descr34" onclick="description(34)">+</a>
+        </div>
+        <img src="" id="pdp34" />
+      </div>
+
+      <div class="carte">
+        <div class="content">
+          <h2 id="name35"></h2>
+          <p id="pole35"></p>
+          <a id="descr35" onclick="description(35)">+</a>
+        </div>
+        <img src="" id="pdp35" />
+      </div>
+
+      <div class="carte">
+        <div class="content">
+          <h2 id="name36"></h2>
+          <p id="pole36"></p>
+          <a id="descr36" onclick="description(36)">+</a>
+        </div>
+        <img src="" id="pdp36" />
+      </div>
+    </div>
+  </body>
+</html>

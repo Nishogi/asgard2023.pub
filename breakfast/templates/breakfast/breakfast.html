@@ -1,0 +1,170 @@
+{% load static %}
+<!DOCTYPE html>
+{% load widget_tweaks %}
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Petits déjeuners Asgard</title>
+  <meta content="" name="description" />
+  <meta content="" name="keywords" />
+  <link
+    href="{% static 'breakfast/sources/images/favicon/favicon.ico' %}"
+    rel="icon"
+  />
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href=" {% static 'breakfast/style/breakfast.css' %} "
+  />
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href=" {% static 'breakfast/style/navbar.css' %} "
+  />
+  <style type="text/css">
+    * {
+      cursor: url(https://cur.cursors-4u.net/sports/spo-1/spo15.cur), auto !important;
+    }
+  </style>
+  <a
+    href="https://www.cursors-4u.com/cursor/2005/05/08/spo15-11.html"
+    target="_blank"
+    title="Sword"
+  >
+    <img
+      src="https://cur.cursors-4u.net/cursor.png"
+      height="auto"
+      width="auto"
+      border="0"
+      alt="Sword"
+      style="position: absolute; top: 0px; right: 0px"
+    />
+  </a>
+</head>
+<header>
+  <nav class="navbar">
+    <a href="/">
+      <img
+        alt="logo"
+        height="auto"
+        width="auto"
+        src="{% static 'breakfast/sources/images/icon.png' %}"
+      />
+    </a>
+    <div class="container nav-container">
+      <input class="checkbox" type="checkbox" />
+      <div class="hamburger-lines">
+        <span class="line" id="line1"></span>
+        <span class="line" id="line2"></span>
+        <span class="line" id="line3"></span>
+      </div>
+      <div class="logo">
+        <h1>Asgard</h1>
+      </div>
+      <div class="nav-links">
+        <ul>
+          <li>
+            <a href="/">Qui sommes-nous ?</a>
+          </li>
+          <li>
+            <a href="/organigramme">Organigramme</a>
+          </li>
+          <li>
+            <a href="/programme">Programme</a>
+          </li>
+          <li>
+            <a href="/partenariats">Nos partenaires</a>
+          </li>
+          <li class="active">
+            <a href="/ptitdej">Commande ton petit-déjeuner !</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+<body>
+  <div class="titres">
+    <h1>Envie d'un petit déjeuner servi au lit ?</h1>
+    <h2>Jeudi, c'est Asgard qui te régale.</h2>
+    <h3>
+      Attention, les petits déjeuners sont réservés aux cotisants BDE et une
+      seule commande est possible par cotisant.
+    </h3>
+  </div>
+  <div class="info">
+    <div class="menu">
+      <h3>Menu 1 - Le festin de Baldr (Menu halal / végé)</h3>
+      <img
+        class="gfaim"
+        src="{% static 'breakfast/sources/images/menu1.png' %}"
+      />
+      <p>Panini chèvre miel et cookie</p>
+    </div>
+    <div class="menu">
+      <h3>Menu 2 - Le buffet de Höd</h3>
+      <img
+        class="gfaim"
+        src="{% static 'breakfast/sources/images/menu2.png' %}"
+      />
+      <p>Coquillettes au chorizo et crêpe</p>
+    </div>
+    <div class="menu">
+      <h3>Menu 3 -Le délice de Vidar (Menu halal)</h3>
+      <img
+        class="gfaim"
+        src="{% static 'breakfast/sources/images/menu3.png' %}"
+      />
+      <p>Riz cantonais et marbré au chocolat</p>
+    </div>
+  </div>
+  <form
+    action="{% url 'breakfast-order' %}"
+    method="post"
+    role="form"
+    class="email-form"
+  >
+  {% csrf_token %}
+    <div class="haut">
+      <div class="gauche">
+        {{orderform.firstName|add_class:"form-control"|append_attr:"placeholder:Prénom"}}
+        {{orderform.lastName|add_class:"form-control"|append_attr:"placeholder:Nom de famille" }}
+        {{orderform.email|add_class:"form-control"|append_attr:"placeholder:Adress email" }}
+        {{orderform.phone|add_class:"form-control"|append_attr:"placeholder:N° de téléphone" }}
+        {{orderform.address|add_class:"form-control"|append_attr:"placeholder:Adresse / N° d'appartement Maisel" }}
+      </div>
+      <div class="droite">
+        {{orderform.comments|add_class:"form-control"|append_attr:"placeholder:Exigences spécifiques (ce que vous n'aimez pas, allergies, etc.)" }}
+      </div>
+    </div>
+    <div class="bas">
+      <div>
+        <label for="menu">Menu :</label>
+        <select class="form-control" name="menu">
+          <option value="1" selected="">Le festin de Baldr</option>
+          <option value="2">Le buffet de Höd</option>
+          <option value="3">Le délice de Vidar</option>
+        </select>
+      </div>
+      <div>
+        <label for="drink_wanted">Boisson :</label>
+        {{ orderform.drinks|add_class:"form-control" }}
+        <select class="form-control" name="drink_wanted">
+          {% for drink in possible_drinks %}
+          <option value="{{ drink }}">{{ drink }}</option>
+          {% endfor %}
+        </select>
+      </div>
+      <div>
+        <label for="deliveryHeure">Je veux être livré :</label>
+        {{ orderform.deliveryTime|add_class:"form-control" }}
+        <select class="form-control" name="deliveryTime">
+          {% for time in available_time %}
+          <option value="{{ time }}">{{ time }}</option>
+          {% endfor %}
+        </select>
+      </div>
+      <button type="submit">Commander !</button>
+    </div>
+  </form>
+</body>
